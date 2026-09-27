@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>...</title>
+
+<script>
+const destino =
+"https://open.spotify.com/playlist/272y43cH5m7wrM2HaSV200";
+
+const partes = decodeURIComponent(window.location.pathname)
+  .split("/")
+  .filter(Boolean);
+
+const palavra = partes[partes.length - 2];
+const playlist = partes[partes.length - 1];
+
+if (
+  palavra === "Σπότιφαϊ" &&
+  playlist.toLowerCase() === "hubble-floats-free"
+) {
+  window.location.replace(destino);
+}
+</script>
+
+<style>
+body {
+  margin: 0;
+  background: white;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+p {
+  font-size: 18px;
+}
+</style>
+</head>
+
+<body>
+<p>Você ainda não encontrou.</p>
+</body>
+</html>
